@@ -58,7 +58,7 @@ import { connect } from 'react-redux';
                 <p style={{color:'red'}}>This is the Name Widget.</p>
                 <p>{this.props.reminders}</p><br/>
                 <button type="submit" onClick={e => {this.onsubmit(e)}}>Submit</button><br/>
-                <p>tt - {this.state.valArray}</p><br/>
+                <p>Search Value - {this.state.valArray}</p><br/>
             </div>
         )
     }

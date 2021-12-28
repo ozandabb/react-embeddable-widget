@@ -1,20 +1,16 @@
-// import React from 'react';
-// import { render } from 'react-dom';
-
-// import App from './Component/search';
-
-// render(
-//   <App />,
-//   document.getElementById('app')
-// );
-
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import Search from './Component/searchComponent';
 import 'bootstrap';
 import 'bootstrap/js/dist/util';
 import 'bootstrap/js/dist/dropdown';
+
+import { createStore } from 'redux';
+import allReducers from './Redux/reducers'
+
+const Store = createStore(
+  allReducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 const App = () => {
     return (
@@ -22,7 +18,7 @@ const App = () => {
     )
   }
 
-ReactDOM.render(<App/>, document.getElementById('widget:search'))
+ReactDOM.render(<App/>, document.getElementById('react-test-widget'))
 
 // ReactDOM.render(<Search/>,document.getElementById('widget:search'));
 

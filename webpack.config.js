@@ -3,6 +3,11 @@ const path = require('path');
 module.exports = {
   mode:'development',
 
+  // entry : [
+  //   './src/widgets/searchWidget.js',
+  //   './src/widgets/nameWidget.js'
+  // ],
+
   entry: {
     search : './src/widgets/searchWidget.js',       // <--- Search Widget Entry
     name   : './src/widgets/nameWidget.js',         // <--- name Widget Entry

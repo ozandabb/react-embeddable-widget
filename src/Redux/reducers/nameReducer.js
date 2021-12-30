@@ -5,7 +5,7 @@ const initialState = {
 const nameReducer = (state = initialState , action) => {
     switch(action.type){
         case 'ADD_REMINDER':
-            console.log("boooooooooo",action.payload);
+            console.log("Name reducer action - ",action.payload);
             return {
                 ...state,
                 reminders: [...state.reminders, action.payload]

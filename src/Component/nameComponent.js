@@ -3,19 +3,14 @@ import { useSelector } from 'react-redux';
 import { connect } from 'react-redux';
 
 // function nameComponent(){
-
 //     // const counter = useSelector(state => state.counter);
 //     console.log("thiihihihihi", this.props.reminders);
-  
 //     return(
 //       <div>
 //         <p>This is the nUmber in Name Component -  {myCounter}</p>
 //       </div>
 //     );
-  
-//   }
-  
-  // export default nameComponent;
+// export default nameComponent;
 
    class nameComponent extends Component {
 
@@ -39,11 +34,13 @@ import { connect } from 'react-redux';
     onsubmit(e) {
       e.preventDefault();
 
-      this.props.dispatch(updateState(key, value)).then(()=>{
-        alert(this.props.reminders)
-     })
+    //   this.props.dispatch(updateState(key, value)).then(()=>{
+    //     alert(this.props.reminders)
+    //  })
+
+     var val = this.props.reminders
   
-      // console.log("this is the form text", this.props.reminders);
+      console.log("this is the form text", this.props.reminders);
       this.setState({
         valArray: this.props.reminders,
       })
@@ -55,8 +52,7 @@ import { connect } from 'react-redux';
       
         return (
             <div>
-                <p style={{color:'red'}}>This is the Name Widget.</p>
-                <p>{this.props.reminders}</p><br/>
+                <p>Existing text - {this.props.reminders}</p><br/>
                 <button type="submit" onClick={e => {this.onsubmit(e)}}>Submit</button><br/>
                 <p>Search Value - {this.state.valArray}</p><br/>
             </div>

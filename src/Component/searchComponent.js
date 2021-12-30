@@ -31,16 +31,18 @@ class searchComponent extends Component {
   // }
   
 
-  onsubmit(e) {
+  onSubmit(e) {
     e.preventDefault();
 
-    console.log("this is the form text", this.props.reminders);
+    
     // this.props.reminders.push(this.state.name);
-    this.props.addReminder(this.state.name)
+    this.props.addReminder(this.state.name);
+    // console.log("this is the form text", this.props.reminders);
 
   }
 
   render () {
+    
     return (
       <div>
           <form>
@@ -49,7 +51,8 @@ class searchComponent extends Component {
             value={this.state.name}
             onChange={e => this.onChange(e)} />
             <br/><br/>
-            <button type="submit" onClick={e => {this.onsubmit(e)}}>Submit</button>
+            <button type="submit" onClick={e => {this.onSubmit(e)}}>Submit</button>
+            <p>Existing Text - {this.props.reminders}</p>
           </form>
       </div>
     );
